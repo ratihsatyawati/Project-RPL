@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #F7FFF6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ================= KONTAINER UTAMA ================= */
+
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.login-container h2 {
+    font-size: 48px;
+    color: #1B5E20;
+    font-weight: 700;
+}
+
+/* ================= KOTAK FORM LOGIN ================= */
+
+.login-box {
+    background: white;
+    border: 2px solid #9CCC65;
+    border-radius: 12px;
+    padding: 40px 35px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0,0,0,.03);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    font-weight: 700;
+    color: #222;
+    font-size: 15px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: .3s;
+}
+
+.form-group input:focus {
+    border-color: #2E7D32;
+}
+
+/* ================= TOMBOL MASUK ================= */
+
+.btn-masuk {
+    width: 100%;
+    border: none;
+    padding: 14px;
+    background: #2E7D32; 
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 10px;
+}
+
+.btn-masuk:hover {
+    background: #1B5E20;
+}
+
+/* ================= TEKS REGISTRASI ================= */
+
+.reg-text {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #444;
+}
+
+.reg-text a {
+    color: #2E7D32;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.reg-text a:hover {
+    color: #1B5E20;
+    text-decoration: underline;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 480px){
+    .login-container h2 {
+        font-size: 38px;
+    }
+    
+    .login-box {
+        padding: 30px 20px;
+    }
+}

@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #F7FFF6;
+}
+
+/* ================= JUDUL ================= */
+
+.judul{
+    padding: 60px 60px 25px;
+    text-align: center;
+}
+
+.judul h2{
+    font-size: 42px;
+    color: #1B5E20;
+}
+
+/* ================= LAYOUT UTAMA (Dua Kolom) ================= */
+
+.checkout-container {
+    padding: 0 60px 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.checkout-form-section h3,
+.checkout-summary-section h3 {
+    text-align: center;
+    color: #1B5E20;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* ================= FORM INFORMASI PENERIMA ================= */
+
+.checkout-form {
+    background: white;
+    border: 2px solid #9CCC65;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 700;
+    color: #222;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: .3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2E7D32;
+}
+
+/* ================= METODE PEMBAYARAN ================= */
+
+.payment-method-section label {
+    font-weight: 700;
+    color: #222;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.payment-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.payment-card {
+    position: relative;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    padding: 15px 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.payment-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.payment-card span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+    display: block;
+}
+
+/* Efek ketika opsi pembayaran dipilih/klik */
+.payment-card:has(input[type="radio"]:checked) {
+    border-color: #2E7D32;
+    background: #E8F5E9;
+}
+
+.payment-card:has(input[type="radio"]:checked) span {
+    color: #1B5E20;
+}
+
+/* ================= DETAIL PESANAN (Kanan) ================= */
+
+.summary-box {
+    background: white;
+    border: 2px solid #9CCC65;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    color: #333;
+}
+
+.summary-item .nama {
+    font-weight: 600;
+    width: 40%;
+}
+
+.summary-item .qty {
+    color: #666;
+    width: 20%;
+}
+
+.summary-item .total-item {
+    font-weight: 600;
+    width: 40%;
+    text-align: right;
+}
+
+hr {
+    border: none;
+    border-top: 1.5px solid #9CCC65;
+    margin: 5px 0;
+}
+
+.summary-cost {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cost-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    color: #444;
+}
+
+.cost-line span:last-child {
+    font-weight: 600;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.summary-total .label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
+}
+
+.summary-total .grand-total {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2E7D32;
+}
+
+/* ================= AREA TOMBOL AKSI (Bawah) ================= */
+
+.checkout-actions {
+    padding: 20px 60px 60px;
+    display: flex;
+    gap: 20px;
+}
+
+.checkout-actions button {
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 15px;
+}
+
+.btn-batal {
+    background: #fff;
+    border: 2px solid #cc3333;
+    color: #cc3333;
+}
+
+.btn-batal:hover {
+    background: #cc3333;
+    color: white;
+}
+
+.btn-checkout-now {
+    background: #2E7D32;
+    color: white;
+    border: 2px solid #2E7D32;
+}
+
+.btn-checkout-now:hover {
+    background: #1B5E20;
+    border-color: #1B5E20;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 900px){
+    .judul{
+        padding: 40px 20px 15px;
+    }
+
+    .checkout-container {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        gap: 30px;
+    }
+
+    .payment-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .checkout-actions {
+        padding: 30px 20px 60px;
+        justify-content: center;
+    }
+    
+    .checkout-actions button {
+        width: 50%;
+        text-align: center;
+    }
+}

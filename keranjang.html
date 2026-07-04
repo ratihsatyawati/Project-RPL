@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Saya - Miguel Fresh Store</title>
+
+    <link rel="stylesheet" href="keranjang.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+
+    <h1>Miguel Fresh Store</h1>
+
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="#">Kontak Kami</a>
+        <a href="#">Profil</a>
+        <a href="pesan.html">Produk</a>
+        <a href="keranjang.html" class="active">Keranjang Saya</a>
+    </nav>
+
+</header>
+
+<section class="judul">
+
+    <h2>Keranjang Saya</h2>
+
+</section>
+
+<main class="cart-container">
+
+    <section class="cart-items">
+
+        <div class="cart-card">
+            
+            <div class="cart-detail">
+                <div class="foto-produk">
+                    <img src="images/semangka.png" alt="Semangka">
+                </div>
+                <div class="info-produk">
+                    <h3>Semangka</h3>
+                    <p class="harga">Rp45.000</p>
+                    <p class="jumlah">Jumlah: 2</p>
+                </div>
+            </div>
+
+            <button class="btn-hapus">Hapus</button>
+
+        </div>
+
+        <div class="cart-card">
+            
+            <div class="cart-detail">
+                <div class="foto-produk">
+                    <img src="images/jeruk.png" alt="Jeruk">
+                </div>
+                <div class="info-produk">
+                    <h3>Jeruk</h3>
+                    <p class="harga">Rp28.000</p>
+                    <p class="jumlah">Jumlah: 1</p>
+                </div>
+            </div>
+
+            <button class="btn-hapus">Hapus</button>
+
+        </div>
+
+        <div class="cart-card card-empty">
+            <button class="btn-add-more" onclick="window.location.href='pesan.html'">
+                Tambah Keranjang
+            </button>
+        </div>
+
+        <div class="cart-card card-empty">
+            <button class="btn-add-more" onclick="window.location.href='pesan.html'">
+                Tambah Keranjang
+            </button>
+        </div>
+
+    </section>
+
+    <section class="cart-summary">
+
+        <h3>Pesanan Saya</h3>
+
+        <div class="summary-box">
+            
+            <div class="summary-item">
+                <span class="nama">Semangka</span>
+                <span class="qty">x2</span>
+                <span class="total-item">Rp90.000</span>
+            </div>
+
+            <div class="summary-item">
+                <span class="nama">Jeruk</span>
+                <span class="qty">x1</span>
+                <span class="total-item">Rp28.000</span>
+            </div>
+
+            <hr>
+
+            <div class="summary-total">
+                <div class="text-total">
+                    <span class="label">Subtotal</span>
+                    <span class="noted">(Belum termasuk ongkos kirim)</span>
+                </div>
+                <span class="grand-total">Rp118.000</span>
+            </div>
+
+        </div>
+
+        <div class="summary-btn">
+            
+            <button class="btn-belanja" onclick="window.location.href='pesan.html'">
+                Belanja Lagi
+            </button>
+
+            <button class="btn-checkout" onclick="window.location.href='checkout.html'">
+                Checkout
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>

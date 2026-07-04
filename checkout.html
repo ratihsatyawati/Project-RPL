@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Pesanan - Miguel Fresh Store</title>
+
+    <link rel="stylesheet" href="checkout.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<section class="judul">
+
+    <h2>Checkout Pesanan</h2>
+
+</section>
+
+<main class="checkout-container">
+
+    <section class="checkout-form-section">
+        
+        <h3>Informasi Penerima</h3>
+
+        <form class="checkout-form" id="formCheckout" action="berhasil.html" method="GET">
+            
+            <div class="form-group">
+                <label for="nama">Nama Lengkap Penerima</label>
+                <input type="text" id="nama" required placeholder="Masukkan nama lengkap">
+            </div>
+
+            <div class="form-group">
+                <label for="telepon">No. Telepon</label>
+                <input type="text" id="telepon" required placeholder="Masukkan no. telepon"
+                       pattern="[0-9]*" 
+                       oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+            </div>
+
+            <div class="form-group">
+                <label for="alamat">Alamat</label>
+                <textarea id="alamat" rows="4" required placeholder="Masukkan alamat lengkap pengiriman"></textarea>
+            </div>
+
+            <div class="payment-method-section">
+                <label>Metode Pembayaran</label>
+                <div class="payment-options">
+                    
+                    <label class="payment-card">
+                        <input type="radio" name="payment" value="transfer" required>
+                        <span>Transfer Bank</span>
+                    </label>
+
+                    <label class="payment-card">
+                        <input type="radio" name="payment" value="qris">
+                        <span>QRIS</span>
+                    </label>
+
+                    <label class="payment-card">
+                        <input type="radio" name="payment" value="ewallet">
+                        <span>E-Wallet</span>
+                    </label>
+
+                    <label class="payment-card">
+                        <input type="radio" name="payment" value="cod">
+                        <span>COD</span>
+                    </label>
+
+                </div>
+            </div>
+
+        </form>
+
+    </section>
+
+    <section class="checkout-summary-section">
+        
+        <h3>Pesanan</h3>
+
+        <div class="summary-box">
+            
+            <div class="summary-item">
+                <span class="nama">Semangka</span>
+                <span class="qty">x2</span>
+                <span class="total-item">Rp90.000</span>
+            </div>
+
+            <div class="summary-item">
+                <span class="nama">Jeruk</span>
+                <span class="qty">x1</span>
+                <span class="total-item">Rp28.000</span>
+            </div>
+
+            <hr>
+
+            <div class="summary-cost">
+                <div class="cost-line">
+                    <span>Subtotal</span>
+                    <span>Rp118.000</span>
+                </div>
+                <div class="cost-line">
+                    <span>Ongkos Kirim</span>
+                    <span>Rp15.000</span>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="summary-total">
+                <span class="label">Total Pembayaran</span>
+                <span class="grand-total">Rp133.000</span>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<div class="checkout-actions">
+    
+    <button class="btn-batal" onclick="window.location.href='keranjang.html'">
+        Batal
+    </button>
+
+    <button class="btn-checkout-now" type="submit" form="formCheckout">
+        Checkout Sekarang
+    </button>
+
+</div>
+
+</body>
+</html>
